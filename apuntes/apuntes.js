@@ -1,0 +1,5 @@
+/* 
+Usaremos NOdejs y mongodb de maneraLocal
+
+
+*/

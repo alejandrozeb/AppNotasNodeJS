@@ -19,5 +19,9 @@ dotenv variables de entorno
 nodemon reinicia el servidor automaticamnte
 handlebars solucion a express-handles
 npm-check-update muestras actializaciones de los modulos
-mpn install 
+npm install nodemon@2.0.2 dotenv@8.2.0 npm-check-updates@4.0.1 -D
+
+Creaando directorios-ç con powershell
+mkdir config,controllers,helpers,models,public,routes,views
+
 */

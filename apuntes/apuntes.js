@@ -1,6 +1,6 @@
 /* 
 Usaremos NOdejs y mongodb de maneraLocal
-
+MODULOS DE PRODUCCION
 connect-flash guarda y muestra mensajes desde el navegador.
 bcryptjs cifrado de texto.
 express-handlebars crear vistas, hvs podemos crear html, express-session memoria del servidor
@@ -13,4 +13,11 @@ npm i  express-handlebars@3.1.0 express-session@1.17.0 bcryptjs@2.4.3 mongoose@5
 
 librerias instaladas.
 
+
+MODULOS DE DESARROLLO
+dotenv variables de entorno
+nodemon reinicia el servidor automaticamnte
+handlebars solucion a express-handles
+npm-check-update muestras actializaciones de los modulos
+mpn install 
 */

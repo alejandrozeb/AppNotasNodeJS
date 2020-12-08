@@ -8,6 +8,7 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 app.set('views',path.join(__dirname, 'views'));
 //middlewares funcionies previas
+app.use(express.urlencoded({extended: false})); //todos llso datos de formularios llegan en formato json
 
 //global variables
 

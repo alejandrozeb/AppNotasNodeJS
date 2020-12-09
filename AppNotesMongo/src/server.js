@@ -9,7 +9,10 @@ const app = express();
 //settings  configuras las dependencias de express
 app.set('port', process.env.PORT || 4000);
 app.set('views',path.join(__dirname, 'views'));
-app.set();
+app.engine('.hbs', exphbs({
+    layoutsDir: path.join(app.get('views'),'layouts'),
+    partialsDir: path.join(app.get('views'),'partials')
+}));//importando el motor de plantilla
 //middlewares funcionies previas
 app.use(express.urlencoded({extended: false})); //todos llso datos de formularios llegan en formato json
 

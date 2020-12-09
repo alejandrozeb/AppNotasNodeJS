@@ -46,4 +46,8 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     handlebars usa layouts y partials
         layouts son una especie de plantilla que nos permite tener un footer un header separados
         partials son pedazos de codigo los cuales vamos a poder importar a otro html.
+
+        configuracion de handlebars carpetas.
+            layoutsDir: path.join(app.get('views'),'layouts'),  /con path join determina donde esta views y lo concatena como path a layouts sin imporatr el sistema operativo.
+            partialsDir: path.join(app.get('views'),'partials')
 */

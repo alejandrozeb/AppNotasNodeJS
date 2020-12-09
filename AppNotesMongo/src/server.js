@@ -10,9 +10,12 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 app.set('views',path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
+    defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'),'layouts'),
-    partialsDir: path.join(app.get('views'),'partials')
+    partialsDir: path.join(app.get('views'),'partials'),
+    extname: '.hbs'
 }));//importando el motor de plantilla
+app.set('view engine', '.hbs');//definimos  a handlebars como nuestro motor de plantilla
 //middlewares funcionies previas
 app.use(express.urlencoded({extended: false})); //todos llso datos de formularios llegan en formato json
 

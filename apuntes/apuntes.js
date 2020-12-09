@@ -50,4 +50,8 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
         configuracion de handlebars carpetas.
             layoutsDir: path.join(app.get('views'),'layouts'),  /con path join determina donde esta views y lo concatena como path a layouts sin imporatr el sistema operativo.
             partialsDir: path.join(app.get('views'),'partials')
+        
+
+            defaultLayout: 'main',      //definimos la vista por defecto
+            extname: '.hbs'     //definios con que extension se va a definir    
 */

@@ -36,5 +36,9 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
  importando moongose
  Schema define que se guradra con el modelo
  model permite crear una clase para acceder a herramientas.
- 
+        ----------NOTAS--------------
+    las funciones flecha mantienes sus limites
+    las funciones nattivas con la palabra reservada function pudes usar el this de otro objeto.
+
+    
 */

@@ -39,6 +39,11 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
         ----------NOTAS--------------
     las funciones flecha mantienes sus limites
     las funciones nattivas con la palabra reservada function pudes usar el this de otro objeto.
-
+        ---------------MOTORES DE PLANTILLA------------
+    nos ayudan a usar html y separarlos en bloques de codigo que vamos a poder reutilizar podemos agregar bucles, if.
+    express handlebars para nodejs
     
+    handlebars usa layouts y partials
+        layouts son una especie de plantilla que nos permite tener un footer un header separados
+        partials son pedazos de codigo los cuales vamos a poder importar a otro html.
 */

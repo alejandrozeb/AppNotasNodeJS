@@ -24,7 +24,8 @@ app.use(express.urlencoded({extended: false})); //todos llso datos de formulario
 
 //routes
 app.get('/', (req,res)=>{
-    res.send('hello world');
+    res.render('index');
+    //res.send('hello world');
 });
 //static files
 app.use(express.static(path.join(__dirname, 'public')));    //con static indicamos que son archivos publicos

@@ -54,4 +54,7 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
 
             defaultLayout: 'main',      //definimos la vista por defecto
             extname: '.hbs'     //definios con que extension se va a definir    
+
+            {{{body}}}
+            del layouts se inserta el codigo.
 */

@@ -24,4 +24,11 @@ npm install nodemon@2.0.2 dotenv@8.2.0 npm-check-updates@4.0.1 -D
 Creaando directorios-ç con powershell
 mkdir config,controllers,helpers,models,public,routes,views
 
+COMANDOS
+"start": "node src/index.js",   //lo usamos en produccion se ejecuta como:
+        npm start
+"dev": "nodemon src/index.js"   //usamos nodemon para que en cada cambio se reinicie nuestro servidor se ejecuta como:
+        npm run dev
+cuando no ejecutamos el start npm necesita la palabra reservada run.
+
 */

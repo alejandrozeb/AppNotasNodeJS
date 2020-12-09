@@ -30,5 +30,5 @@ COMANDOS
 "dev": "nodemon src/index.js"   //usamos nodemon para que en cada cambio se reinicie nuestro servidor se ejecuta como:
         npm run dev
 cuando no ejecutamos el start npm necesita la palabra reservada run.
-
+ en .env podemos subir tokens e apis o de algun servicio que quereamos consumir
 */

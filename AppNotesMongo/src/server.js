@@ -14,7 +14,9 @@ app.use(express.urlencoded({extended: false})); //todos llso datos de formulario
 
 
 //routes
-
+app.get('/', (req,res)=>{
+    res.send('hello world');
+});
 //static files
 
 

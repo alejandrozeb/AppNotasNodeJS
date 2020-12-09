@@ -31,4 +31,10 @@ COMANDOS
         npm run dev
 cuando no ejecutamos el start npm necesita la palabra reservada run.
  en .env podemos subir tokens e apis o de algun servicio que quereamos consumir
+
+
+ importando moongose
+ Schema define que se guradra con el modelo
+ model permite crear una clase para acceder a herramientas.
+ 
 */

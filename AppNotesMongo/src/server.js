@@ -18,7 +18,7 @@ app.get('/', (req,res)=>{
     res.send('hello world');
 });
 //static files
-
+app.use(express.static(path.join(__dirname, 'public')));    //con static indicamos que son archivos publicos
 
 
 module.exports = app;

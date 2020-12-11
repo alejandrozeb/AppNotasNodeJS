@@ -62,4 +62,8 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     se usan metodos http. 
     ---------------controles-------------
     tiene funciones para procesar los datos
+
+    con get obtines las vistas ademas devolvemos data
+    post recibir datos desde la vista y lo procesa
+    put para actualizar datos
 */

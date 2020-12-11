@@ -12,4 +12,13 @@ notesCtrl.createNewNote = (req,res) =>{
 notesCtrl.renderNotes = (req,res) =>{
     res.send('render note');
 }
+
+notesCtrl.renderEditForm = (req,res) =>{
+    res.send('render edit form');
+}
+
+notesCtrl.updateNote = (req,res) =>{
+    res.send('update note');
+}
+
 module.exports=notesCtrl;

@@ -20,5 +20,8 @@ notesCtrl.renderEditForm = (req,res) =>{
 notesCtrl.updateNote = (req,res) =>{
     res.send('update note');
 }
+notesCtrl.deleteNote = (req,res) =>{
+    res.send('deleting note');
+}
 
 module.exports=notesCtrl;

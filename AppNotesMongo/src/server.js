@@ -3,6 +3,7 @@ const express = require('express');
 //importando el motor de plantilla
 const exphbs = require('express-handlebars');
 const path = require('path');
+const router = require('./routes/index.routes');
 //initializations
 const app = express();
 
@@ -23,10 +24,12 @@ app.use(express.urlencoded({extended: false})); //todos llso datos de formulario
 
 
 //routes
-app.get('/', (req,res)=>{
+app.use(require('./routes/index.routes'));    // desde ahora usaremos un archivo diferente para definir las rutas
+
+/* app.get('/', (req,res)=>{
     res.render('index');
     //res.send('hello world');
-});
+}); */
 //static files
 app.use(express.static(path.join(__dirname, 'public')));    //con static indicamos que son archivos publicos
 

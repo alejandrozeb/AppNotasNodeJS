@@ -57,4 +57,7 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
 
             {{{body}}}
             del layouts se inserta el codigo.
+    *------------------------ROUTES----------
+    Se usan con las tareas, separamos las reglas de negocio para eso usamos las url.
+    se usan metodos http. 
 */

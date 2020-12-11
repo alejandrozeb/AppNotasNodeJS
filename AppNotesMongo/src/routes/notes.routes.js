@@ -1,5 +1,6 @@
 const {Router} = require('express');
 const router = Router()
-const {} = require('../controllers/notes.controller');
+const {renderNoteForm} = require('../controllers/notes.controller');
 
+router.get('/notes/add',renderNoteForm);//mostraremos un formulario
 module.exports= router;

@@ -25,7 +25,7 @@ app.use(express.urlencoded({extended: false})); //todos llso datos de formulario
 
 //routes
 app.use(require('./routes/index.routes'));    // desde ahora usaremos un archivo diferente para definir las rutas
-
+app.use(require('./routes/notes.routes'));//reconoce las rutas de notes 
 /* app.get('/', (req,res)=>{
     res.render('index');
     //res.send('hello world');

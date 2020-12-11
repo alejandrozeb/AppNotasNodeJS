@@ -60,4 +60,6 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     *------------------------ROUTES----------
     Se usan con las tareas, separamos las reglas de negocio para eso usamos las url.
     se usan metodos http. 
+    ---------------controles-------------
+    tiene funciones para procesar los datos
 */

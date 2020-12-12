@@ -66,4 +66,8 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     con get obtines las vistas ademas devolvemos data
     post recibir datos desde la vista y lo procesa
     put para actualizar datos
-*/
+    ---------------handlebars error
+    para solucionarlo debo instalar una dpendencia extra, para que pueda recorrer el objeto sin ningun problema.
+        npm i handlebars@4.5.0
+    debe ser esa version de handlebars.
+    */

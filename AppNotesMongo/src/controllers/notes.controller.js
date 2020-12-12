@@ -15,8 +15,10 @@ notesCtrl.createNewNote = async (req,res) =>{
     res.send(' new note');
 }
 
-notesCtrl.renderNotes = (req,res) =>{
-    res.send('render note');
+notesCtrl.renderNotes = async (req,res) =>{
+    const notes = await  Note.find();
+    //console.log(notes);
+    res.render('notes/allnotes',{notes});//pasamos la info a la vista
 }
 
 notesCtrl.renderEditForm = (req,res) =>{

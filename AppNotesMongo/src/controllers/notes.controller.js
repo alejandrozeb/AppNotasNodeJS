@@ -8,9 +8,10 @@ const Note =  require('../models/Note');
 notesCtrl.renderNoteForm = (req,res) =>{
     res.render('notes/newnote');
 }
-notesCtrl.createNewNote = (req,res) =>{
+notesCtrl.createNewNote = async (req,res) =>{
     const {title,description} = req.body;
-    new Note(title,description);    
+    const newNote= new Note({title,description});
+    await newNote.save();    
     res.send(' new note');
 }
 

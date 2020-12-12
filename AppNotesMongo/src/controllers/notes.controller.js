@@ -1,11 +1,16 @@
+const { request } = require("express");
 const router = require("../routes/notes.routes");
 
+
 const notesCtrl = {};
+const Note =  require('../models/Note');
 
 notesCtrl.renderNoteForm = (req,res) =>{
     res.render('notes/newnote');
 }
 notesCtrl.createNewNote = (req,res) =>{
+    const {title,description} = req.body;
+    new Note(title,description);    
     res.send(' new note');
 }
 

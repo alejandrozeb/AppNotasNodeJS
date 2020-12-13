@@ -28,8 +28,10 @@ notesCtrl.renderEditForm = (req,res) =>{
 notesCtrl.updateNote = (req,res) =>{
     res.send('update note');
 }
-notesCtrl.deleteNote = (req,res) =>{
-    res.send('deleting note');
+notesCtrl.deleteNote = async (req,res) =>{
+    await Note.findByIdAndDelete(req.params.id);
+    res.redirect('/notes');
+
 }
 
 module.exports=notesCtrl;

@@ -22,7 +22,7 @@ notesCtrl.renderNotes = async (req,res) =>{
 }
 
 notesCtrl.renderEditForm = (req,res) =>{
-    res.send('render edit form');
+    res.render('notes/editnote');
 }
 
 notesCtrl.updateNote = (req,res) =>{

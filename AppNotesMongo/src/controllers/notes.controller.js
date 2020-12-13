@@ -21,8 +21,9 @@ notesCtrl.renderNotes = async (req,res) =>{
     res.render('notes/allnotes',{notes});//pasamos la info a la vista
 }
 
-notesCtrl.renderEditForm = (req,res) =>{
-    res.render('notes/editnote');
+notesCtrl.renderEditForm = async (req,res) =>{
+    const note= await Note.findById(req.params.id);
+    res.render('notes/editnote', {note});
 }
 
 notesCtrl.updateNote = (req,res) =>{

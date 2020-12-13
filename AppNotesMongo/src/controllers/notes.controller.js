@@ -26,8 +26,10 @@ notesCtrl.renderEditForm = async (req,res) =>{
     res.render('notes/editnote', {note});
 }
 
-notesCtrl.updateNote = (req,res) =>{
-    res.send('update note');
+notesCtrl.updateNote = async (req,res) =>{
+    const{title,description} = req.body;
+    await Note.findByIdAndUpdate(req.params.id,{title, description });
+    res.redirect('/notes');
 }
 notesCtrl.deleteNote = async (req,res) =>{
     await Note.findByIdAndDelete(req.params.id);

@@ -70,4 +70,18 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     para solucionarlo debo instalar una dpendencia extra, para que pueda recorrer el objeto sin ningun problema.
         npm i handlebars@4.5.0
     debe ser esa version de handlebars.
+
+    -----------method override------------
+    router.delete('/notes/delete/:id',deleteNote);
+
+    no reconoce el verbo delete.
+    
+    este modulo nos permite hacaer estas peticiones con el formulario
+
+    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+    En la url que enviamos podemos añadir el metodo de envio que reconocera override.
+    ademas debemos añadir un campo adicional que no se vera en la vista pero nos da informacion del form
+    
+    
     */

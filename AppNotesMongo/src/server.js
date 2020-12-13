@@ -4,6 +4,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const router = require('./routes/index.routes');
+const methodOverride = require('method-override');
 //initializations
 const app = express();
 
@@ -19,6 +20,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');//definimos  a handlebars como nuestro motor de plantilla
 //middlewares funcionies previas
 app.use(express.urlencoded({extended: false})); //todos llso datos de formularios llegan en formato json
+app.use(methodOverride('_method'));
 
 //global variables
 

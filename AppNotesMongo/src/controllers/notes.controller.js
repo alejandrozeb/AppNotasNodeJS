@@ -12,7 +12,7 @@ notesCtrl.createNewNote = async (req,res) =>{
     const {title,description} = req.body;
     const newNote= new Note({title,description});
     await newNote.save();    
-    res.send(' new note');
+    res.redirect('/notes');
 }
 
 notesCtrl.renderNotes = async (req,res) =>{

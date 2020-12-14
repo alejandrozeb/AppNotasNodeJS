@@ -85,6 +85,8 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     -----------------Connect-flash---------------
     Nos ayuda a mostrar mensajes entre paginas (stateless)
     comportamiento sin estado.
+    app.use(flash());
+    Le agrega al request una funcion.
     ES UN MIDLEWARE
     --------------------express session---------
     definimos que mensajes van a salir

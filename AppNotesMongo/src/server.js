@@ -29,6 +29,8 @@ app.use(session({
     saveUninitialized: true
 }));
 
+app.use(flash());
+
 //global variables
 
 

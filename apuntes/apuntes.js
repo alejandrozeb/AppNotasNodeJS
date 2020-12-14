@@ -82,6 +82,11 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
                         <input type="hidden" name="_method" value="DELETE">
     En la url que enviamos podemos añadir el metodo de envio que reconocera override.
     ademas debemos añadir un campo adicional que no se vera en la vista pero nos da informacion del form
-    
-    
+    -----------------Connect-flash---------------
+    Nos ayuda a mostrar mensajes entre paginas (stateless)
+    comportamiento sin estado.
+    ES UN MIDLEWARE
+    --------------------express session---------
+    definimos que mensajes van a salir
+    ES UN MIDLEWARE
     */

@@ -32,7 +32,11 @@ app.use(session({
 app.use(flash());
 
 //global variables
-
+app.use((req,res,next)=>{
+    res.locals.success_msg = req.flash('success_msg');
+    
+    next();
+});
 
 //routes
 app.use(require('./routes/index.routes'));    // desde ahora usaremos un archivo diferente para definir las rutas

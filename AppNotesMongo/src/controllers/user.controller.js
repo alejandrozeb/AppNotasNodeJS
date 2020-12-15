@@ -17,4 +17,4 @@ userCtrl.logout = (req,res) =>{
     res.send('logout');
 };
 
-module.exports = usersCtrl;
+module.exports = userCtrl;

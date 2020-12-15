@@ -87,8 +87,13 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     comportamiento sin estado.
     app.use(flash());
     Le agrega al request una funcion.
+    req.flash('success_msg', 'Note added Successfully');
+    guarda el mensaje, 
+    
+    
     ES UN MIDLEWARE
+
     --------------------express session---------
     definimos que mensajes van a salir
-    ES UN MIDLEWARE
+    ES UN MIDLEWARE zzzz
     */

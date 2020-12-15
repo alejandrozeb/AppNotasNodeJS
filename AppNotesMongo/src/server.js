@@ -41,6 +41,7 @@ app.use((req,res,next)=>{
 //routes
 app.use(require('./routes/index.routes'));    // desde ahora usaremos un archivo diferente para definir las rutas
 app.use(require('./routes/notes.routes'));//reconoce las rutas de notes 
+app.use(require('./routes/users.routes'));
 /* app.get('/', (req,res)=>{
     res.render('index');
     //res.send('hello world');

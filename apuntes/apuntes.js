@@ -96,4 +96,9 @@ cuando no ejecutamos el start npm necesita la palabra reservada run.
     --------------------express session---------
     definimos que mensajes van a salir
     ES UN MIDLEWARE zzzz
+    --------------passport------
+    guarda las funciones de autenticacion.
+    ademas que guarda la sessions, passport hace uso de las sessiones y verifica la autorizacion 
+    passport-local permite usarlo con la bd.
+    con passport podemos autenticarnos con nuestra cuenta google o facebook
     */

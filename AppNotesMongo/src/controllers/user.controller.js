@@ -1,9 +1,10 @@
 const userCtrl={};
+const User = require('../models/User');
 userCtrl.renderSignupform = (req,res)=>{
     res.render('users/signup');
 };
 
-userCtrl.signup = (req, res) =>{
+userCtrl.signup = async (req, res) =>{
     const {name,email,password, confirm_password} = req.body;
     const errors= [];
     if(password != confirm_password){
@@ -22,7 +23,16 @@ userCtrl.signup = (req, res) =>{
         });
         //enviamos el form con el formulario
     }else{
-        res.send('signup successfully');
+        //guardando datos
+        const emailUser = await User.findOne({email: email});
+        if(emailUser){
+            req.flash('error_msg', 'The email is already in use.');
+            res.redirect('/users/signup');
+        }else{
+            const newUser=new User({name,email,password});
+            await newUser.save();
+            res.redirect('/users/signin');
+        }
     }
 };
 userCtrl.renderSiginform = (req,res) =>{

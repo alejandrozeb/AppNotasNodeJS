@@ -12,8 +12,14 @@ userCtrl.signup = (req, res) =>{
     if(password.length < 4){
         errors.push({text: 'Passwords must be at least 4 characters.'});
     }
-
-    res.send('received');
+    if(errors.length > 0){
+        res.render('users/signup',{
+            errors
+        });
+        //enviamos el form con el formulario
+    }else{
+        res.send('signup successfully');
+    }
 };
 userCtrl.renderSiginform = (req,res) =>{
     res.render('users/signin');

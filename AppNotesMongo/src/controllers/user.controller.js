@@ -4,7 +4,16 @@ userCtrl.renderSignupform = (req,res)=>{
 };
 
 userCtrl.signup = (req, res) =>{
-    res.send('signup');
+    const {name,email,password, confirm_password} = req.body;
+    const errors= [];
+    if(password != confirm_password){
+        errors.push({text:'Passwords do not match'}); 
+    }
+    if(password.length < 4){
+        errors.push({text: 'Passwords must be at least 4 characters.'});
+    }
+
+    res.send('received');
 };
 userCtrl.renderSiginform = (req,res) =>{
     res.render('users/signin');

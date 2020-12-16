@@ -14,7 +14,11 @@ userCtrl.signup = (req, res) =>{
     }
     if(errors.length > 0){
         res.render('users/signup',{
-            errors
+            errors,
+            name,
+            email,
+            password,
+            confirm_password
         });
         //enviamos el form con el formulario
     }else{

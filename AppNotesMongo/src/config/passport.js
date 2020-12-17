@@ -16,7 +16,7 @@ passport.use(new localStrategy({
         return done(null,false, {message: 'Not user Found'});
     }else{
         //match password's user
-        const match= await user.matchPassword(passport);
+        const match= await user.matchPassword(password);
         if(match){
             return done(null,user);
             //gurada el usuario en la session

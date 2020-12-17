@@ -6,7 +6,8 @@ const path = require('path');
 const router = require('./routes/index.routes');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
-const session = require('express-session')
+const session = require('express-session');
+const passport = require('passport');
 //initializations
 const app = express();
 
@@ -20,7 +21,7 @@ app.engine('.hbs', exphbs({
     extname: '.hbs'
 }));//importando el motor de plantilla
 app.set('view engine', '.hbs');//definimos  a handlebars como nuestro motor de plantilla
-//middlewares funcionies previas
+//middlewares funcionies previas------------------------------
 app.use(express.urlencoded({extended: false})); //todos llso datos de formularios llegan en formato json
 app.use(methodOverride('_method'));
 app.use(session({
@@ -28,10 +29,12 @@ app.use(session({
     resave:true,
     saveUninitialized: true
 }));
-
+//debe ir despues de session se basa en ese modulo
+app.use(passport.initialize());
+app.use(passport.session);
 app.use(flash());
 
-//global variables
+//global variables----------------------
 app.use((req,res,next)=>{
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
@@ -39,7 +42,7 @@ app.use((req,res,next)=>{
     next();
 });
 
-//routes
+//routes-------------
 app.use(require('./routes/index.routes'));    // desde ahora usaremos un archivo diferente para definir las rutas
 app.use(require('./routes/notes.routes'));//reconoce las rutas de notes 
 app.use(require('./routes/users.routes'));
@@ -47,7 +50,7 @@ app.use(require('./routes/users.routes'));
     res.render('index');
     //res.send('hello world');
 }); */
-//static files
+//static files-----------------
 app.use(express.static(path.join(__dirname, 'public')));    //con static indicamos que son archivos publicos
 
 

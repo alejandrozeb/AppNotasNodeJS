@@ -10,7 +10,7 @@ const session = require('express-session');
 const passport = require('passport');
 //initializations
 const app = express();
-
+require('./config/passport');
 //settings  configuras las dependencias de express
 app.set('port', process.env.PORT || 4000);
 app.set('views',path.join(__dirname, 'views'));
@@ -31,13 +31,14 @@ app.use(session({
 }));
 //debe ir despues de session se basa en ese modulo
 app.use(passport.initialize());
-app.use(passport.session);
+app.use(passport.session());
 app.use(flash());
 
 //global variables----------------------
 app.use((req,res,next)=>{
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
     
     next();
 });

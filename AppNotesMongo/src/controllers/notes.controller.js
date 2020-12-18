@@ -11,13 +11,14 @@ notesCtrl.renderNoteForm = (req,res) =>{
 notesCtrl.createNewNote = async (req,res) =>{
     const {title,description} = req.body;
     const newNote= new Note({title,description});
+    newNote.user = req.user.id;
     await newNote.save();
     req.flash('success_msg', 'Note added Successfully');    
     res.redirect('/notes');
 }
 
 notesCtrl.renderNotes = async (req,res) =>{
-    const notes = await  Note.find();
+    const notes = await  Note.find({user: req.user.id});
     //console.log(notes);
     res.render('notes/allnotes',{notes});//pasamos la info a la vista
 }
